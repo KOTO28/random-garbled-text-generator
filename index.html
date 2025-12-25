@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirect</title>
+  </head>
+  <body>
+    It will redirect automatically.<br />
+    <a href="./en/">If you are not redirected, click here.</a>
+  </body>
+  <script>
+    (function () {
+      const lang = navigator.languages?.[0] || navigator.language;
+
+      if (lang && lang.startsWith("ja")) {
+        window.location.replace("./ja/");
+      } else {
+        window.location.replace("./en/");
+      }
+    })();
+  </script>
+</html>
