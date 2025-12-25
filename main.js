@@ -2,6 +2,7 @@ const CHAR_CODE_MAX = 0xffff;
 
 const lengthInput = document.getElementById("length-input");
 const generateButton = document.getElementById("generate-btn");
+const outputArea = document.getElementById("output-area");
 
 function rand(max) {
   return Math.random() * max;
@@ -19,5 +20,6 @@ function generateRandomGarbledText(length) {
 generateButton.addEventListener("click", () => {
   const length = parseInt(lengthInput.value);
   const garbledText = generateRandomGarbledText(length);
-  alert(garbledText);
+  // alert(garbledText);
+  outputArea.value = garbledText;
 });
